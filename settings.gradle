@@ -1,0 +1,1 @@
+include ':app', ':jokesjavalibrary', ':joketeller', ':backend'
