@@ -22,6 +22,15 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors{
+        free {
+            applicationId "com.example.builditbiggerapp.free"
+        }
+        paid {
+            applicationId "com.example.builditbiggerapp.paid"
+        }
+    }
 }
 
 dependencies {
@@ -30,7 +39,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.0.0'
-    compile 'com.google.android.gms:play-services-ads:9.8.0'
+    freeCompile 'com.google.android.gms:play-services-ads:9.8.0'
     compile project(':jokesjavalibrary')
     compile project(':joketeller')
     compile project(path: ':backend', configuration: 'android-endpoints')

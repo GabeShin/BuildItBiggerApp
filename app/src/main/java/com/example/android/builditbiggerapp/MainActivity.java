@@ -48,12 +48,9 @@ public class MainActivity extends AppCompatActivity {
     public void tellJoke(View view) {
         String joke = "";
 
-        Log.v("LOG_TAG", "DDDDDDDDDDDDDDDDDDD= CLicked! DDDDDDDDDDDDDDDDDD");
-
         EndPointsAsyncTask asyncTask = new EndPointsAsyncTask();
         try {
             joke = asyncTask.execute().get();
-            Log.v("LOG_TAG", "DDDDDDDDDDDDDDDDDDD= joke is " + joke + "! DDDDDDDDDDDDDDDDDD");
         } catch (Exception e){
             e.printStackTrace();
         }
